@@ -1,0 +1,12 @@
+what happens when you type a url on the browser - it is same as requesting an API to fetch data
+
+client server architecture or request response model
+client(browser) request data from server(where the webpage is hosted) and gets the response
+
+https://www.google.com/maps
+https - protocol
+www.google.com - domain
+maps - resource
+
+when url is typed it first goes to DNS(phonebook of internet) to search for domain names like
+https://216.58.211.206:443

@@ -1,0 +1,51 @@
+-Node js : js runtime, built on google's open source V8 js engine.
+-html,css,js,react,angular - all execute on browsers.
+-If we execute js outside of browser to overcome the disadvantages(accessing file system, better networking) of running it on browser, then its node.js
+-node.js is env where the js code executes, who parses and executes - V8 js engine
+
+-when to use node.js :
+-API with DB(preferably noSql)
+-data streaming(youtube)
+-real time chat apps
+-server side web app
+
+-when to not use node.js:
+-apps with heavy server side processing(instead use php,python,ruby)
+-video conversions,image conversions, file compression
+
+-why :
+to build highly scalable and fast applications
+single threaded, event driven, non-blocking I/O
+
+-node documentation : noedejs.org
+
+- to use pre define modules, get them into your current file Ex : const fs=require('fs');
+
+-synchronous(blocking) : executes one line after another in sequence
+-asynchronous(non-blocking) code : use async functions like readFile, which uses a callback fn
+that is executed once the file is done reading the contents(readFile fn)
+-why use async - nodejs uses single thread, if sync is used, requested by a single user, all other
+users need to wait until the first user is served which is not efficient way
+-callback hell : when the first fn execution depends on the execution of second and so on
+Ex : fs.readFile(start.txt,(err,data1=>{
+fs.readFile(start2.txt,(err,data2=>{
+fs.readFile(start3.txt,(err=>{
+console.log("done");}))
+}))
+}))
+
+-what is an web API - service from which we can request some data
+-every file in node.js is a module
+-npm : contains all 3rd party packages that can be used in our apps
+-npm init : asks few questions and based on the answers creates package.json file
+
+-nodemon : dev dependency, automatically load files on changes without needing restart server
+npm i nodemon --save
+
+-globally install packages to make them available across the entire machine
+sudo npm i nodemon --global
+
+const slugify=require('slugify')
+can be converted from localhost:3000/product?id=0 to localhost:3000/fresh-avocados
+
+npm outdated - gives the list of outdated packages

@@ -1,0 +1,11 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "Learning nodejs by building",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
