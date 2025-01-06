@@ -8,5 +8,36 @@ https - protocol
 www.google.com - domain
 maps - resource
 
+1st step :
 when url is typed it first goes to DNS(phonebook of internet) to search for domain names like
 https://216.58.211.206:443
+216.58.211.206 - ip address
+443 : port
+
+2nd step : TCP/IP socket connection (determine how data moves through internet)
+
+3rd step : HTTP request communication protocol (set of rules for 2 or more computers to talk to each other)HTTPS(encrypted TLS/SLS)
+GET /maps HTTP/1.1
+[request header]
+[request body] (for POST only)
+
+4th step : HTTP response
+HTTP/1.1 200 OK
+[response header]
+[response body]
+
+5th step : index.html is loaded first, scanned for assets(JS,CSS, image) and then process is repeated for each file
+
+frontend(everything developed on the browser, something that is visible to the user) HTML,CSS,JS,React, Redux, Graphql, Angular
+backend(everything that is not visible to user)
+server - it is a computer that stores files(HTML,css,etc) and then runs a HTTP server(bridge betweeen frontend and backend), capable of processing requests and send responses - this is static server
+dynamic web server - which has a backend app(HTTP server, files, app and db talking to each other)
+stacks - node.js mongodb, ruby on rails, php, mysql, postgreSQL
+
+static website : load files from server onto browser, the dynamic nature of app(showing animations is not dynamic in the sense of a website)
+
+dynamic website : generally have a db, app running , build website based on template, everytime a request comes(request could be diff cotent for login & logout page, loading content based on new feed on youtube, user actions, etc), it dynamically fetches data does the processing(until this step is called server side rendering ) and then renders on the browser
+
+API : software that can be used by another software - client side rendering
+db->get data->json->browser = building api
+browser->build website(using template) = consuming api
